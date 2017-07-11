@@ -1,0 +1,18 @@
+package util.banco.base;
+
+public enum TipoBanco {
+
+	TREINO_POSITIVO,
+	TREINO_NEGATIVO,
+
+	VALIDACAO_POSITIVO,
+	VALIDACAO_NEGATIVO,
+	
+	TESTE_POSITIVO,
+	TESTE_NEGATIVO,
+	
+	TREINO,
+	VALIDACAO,
+	TESTE
+	
+}
