@@ -503,7 +503,20 @@ public class LIPNet implements Comparable<LIPNet> {
 		double area = calculaArea(roc);
 		return area;
 	}
-	
+
+	public static double calculaArea(double[][] els) {
+		double area = 0;
+		for (int i = 1; i < els.length; i++) {
+			// System.out.println(els[i][0]+" | "+els[i][1]);
+			double base = els[i][1] - els[i - 1][1];
+			double alturaTriangulo = els[i][0] - els[i - 1][0];
+			double alturaRetangulo = els[i - 1][0];
+			double areaTriangulo = (base * alturaTriangulo) / 2;
+			double areaRetangulo = base * alturaRetangulo;
+			area = area + areaTriangulo + areaRetangulo;
+		}
+		return area;
+	}
 
 	public void print() {
 		camadas1D[0].print();
